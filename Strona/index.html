@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script
+			src="https://kit.fontawesome.com/90bfbfad1c.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Genrator haseł</title>
+	</head>
+	<body>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<div class="password">
+			<div class="header">
+				<h1>GENERATOR HASEŁ</h1>
+				<input
+					type="text"
+					class="password-input"
+					placeholder="Twoje hasło..."
+				/>
+				<button class="btn-copy" title="Kopiuj"><i class="fa-solid fa-copy"></i></button>
+			</div>
+			<div class="password-list">
+				<h3>WYBIERZ OPCJE GENEROWANEGO HASŁA:</h3>
+				<p class="error-info1">Przynajmniej jedna z opcji musi być wybrana.</p>
+                <p class="error-info2"></p>
+                <p class="error-info3"></p>
+                
+				<ul>
+                    <li>
+                        Czy hasło powinno zawierać małe litery (true/false)?
+                        <div class="toggle-button small-letters"></div>
+                    </li>
+                    <li>
+                        Czy hasło powinno zawierać duże litery (true/false)?
+                        <div class="toggle-button big-letters"></div>
+                    </li>
+                    <li>
+                        Czy hasło powinno zawierać cyfry (true/false)?
+                        <div class="toggle-button numbers"></div>
+                    </li>
+                    <li>
+                        Czy hasło powinno zawierać znaki specjalne (true/false)?
+                        <div class="toggle-button special-signs"></div>
+                    </li>
+                    <li style="display: none;">
+                        Podaj dozwolone znaki specjalne:
+                        <div><input type="text" class="allow-signs"></div>
+                    </li>
+                    <li>
+                        Podaj długość hasła:
+                        <div><input type="number" value="10" class="password-lenght"></div>
+                    </li>
+                </ul>
+				<button class="btn-generate" title="Wygeneruj hasło">Wygeneruj hasło</i></button>
+			</div>
+		</div>
+
+		<script src="script1.js"></script>
+	</body>
+</html>

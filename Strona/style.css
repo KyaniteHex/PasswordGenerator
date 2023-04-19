@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--deep-dark: rgb(26, 26, 26);
+	--light-dark: rgb(79, 82, 92);
+	--light-blue: rgb(0, 132, 255);
+	--dark-blue: rgb(2, 84, 161);
+	--light: rgb(245, 245, 245);
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	margin-top: 120px;
+	font-family: 'Montserrat', sans-serif;
+	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+h1 {
+	color: var(--light);
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.password {
+	width: 800px;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 4px 4px 5px rgba(82, 82, 82, 0.4);
+	text-align: center;
+}
+
+.header {
+	border-radius: 5px 5px 0 0;
+	padding: 40px;
+	background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.password-input {
+	width: 80%;
+	padding: 10px 20px;
+	margin-right: 20px;
+	border: none;
+	border-radius: 5px;
+	color: var(--light-dark);
+	background-color: var(--light);
+}
+
+.error-info {
+	margin-top: 20px;
+	color: var(--dark-blue);
+}
+
+.btn-copy,
+.btn-generate {
+	padding: 10px 22px;
+	border: none;
+	border-radius: 5px;
+	color: var(--deep-dark);
+	background-color: var(--light);
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: color 0.3s, background-color 0.3s;
+}
+
+.btn-copy:hover,
+.btn-generate:hover {
+	color: #fff;
+	background-color: var(--light-dark);
+}
+
+.password-list {
+	padding: 20px 0;
+}
+
+.password-list h3 {
+	text-transform: uppercase;
+	margin-bottom: 16px;
+}
+
+.password-list li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px;
+	padding: 10px;
+	padding-left: 20px;
+	text-align: left;
+	list-style: none;
+	background-color: var(--light);
+}
+
+.toggle-button {
+	display: inline-block;
+	height: 30px;
+	width: 60px;
+	border-radius: 100px;
+	background-color: #f4f4f4;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	margin-left: auto;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition: background-color 0.2s ease;
+}
+
+.toggle-button::before {
+	content: '';
+	height: 25px;
+	width: 25px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	transition: transform 0.5s ease;
+}
+
+.toggle-button.active::before {
+	transform: translateY(-50%) translateX(30px);
+}
+
+/* Dodajemy nową regułę dla klasy active, aby zmienić kolor tła przycisku */
+.toggle-button.active {
+	background-color: #96e6a1;
+}
+
+/* Dodajemy regułę dla klasy active, aby zmienić kolor tekstu na przycisku */
+.toggle-button.active::before {
+	background-color: #fff; /* Ustawiamy kolor tła kółka na biały */
+	color: #96e6a1; /* Ustawiamy kolor tekstu na przycisku na zielony */
+}
+
+.password-lenght,
+.allow-signs {
+	width: 80%;
+	padding: 10px 20px;
+	margin-left: 35px;
+	border: none;
+	border-radius: 5px;
+	color: var(--light-dark);
+	background-color: #fff;
+}
